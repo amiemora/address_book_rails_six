@@ -1,0 +1,18 @@
+.gradient-custom {
+    background: #f0f0f0;
+    background: -webkit-linear-gradient(to bottom, rgba(240, 240, 240, 0.5), rgba(211, 217, 227, 0.5));
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 0.5), rgba(211, 217, 227, 0.5))
+  }
+
+  .loginout {
+    margin-right: 1em;
+  }
+  .loginout, a {
+    margin-right: 1em;
+  }
+  .loginout, a:hover {
+    background-color: #f0f0f0;
+  }
+.hoverfix:hover {
+    background-color: #f0f0f0;
+}

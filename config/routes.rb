@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "main#index"
+  get 'pages/homepage'
+  # root "main#index"
+  root to: "pages#homepage"
   get "signup" => "users#new"
   get "login" => "sessions#new"
   get "logout" => "sessions#destroy"
