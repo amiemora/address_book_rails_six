@@ -1,4 +1,5 @@
-<%= form_with(model: phone_number) do |form| %>
+
+<%= form_with(model: phone_number, class: 'editform') do |form| %>
   <% if phone_number.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(phone_number.errors.count, "error") %> prohibited this phone_number from being saved:</h2>
@@ -10,23 +11,20 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+  <div class="col-md-2">
+     <label class="form-label">Person ID</label>
+    <%= form.text_field :person_id, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
+  <div class="col-md-6">
+    <label class="form-label">Phone #</label>
+    <%= form.text_field :phone_number, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
+  <div class="col-md-4">
+    <label class="form-label">Comment</label>
+    <%= form.text_field :comment, class: 'form-control' %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="col-12">
+    <%= form.submit class: 'btn btn-info update' %>
+<%= link_to 'Back', phone_numbers_path, class: 'btn btn-info showback' %>
   </div>
 <% end %>

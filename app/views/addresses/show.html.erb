@@ -1,36 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Person:</strong>
-  <%= @address.person_id %>
-</p>
-
-<p>
-  <strong>Street:</strong>
-  <%= @address.street %>
-</p>
-
-<p>
-  <strong>Town:</strong>
-  <%= @address.town %>
-</p>
-
-<p>
-  <strong>Zip:</strong>
-  <%= @address.zip %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @address.state %>
-</p>
-
-
-<p>
-  <strong>Country:</strong>
-  <%= @address.country %>
-</p>
-
-
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID:   <%= @address.person_id %></li>
+      <li class="list-group-item">Street:    <%= @address.street %> </li>
+      <li class="list-group-item">Town:  <%= @address.town %> </li>
+      <li class="list-group-item">Zip:   <%= @address.zip %> </li>
+      <li class="list-group-item">State:  <%= @address.state %> </li>
+      <li class="list-group-item">Country:  <%= @address.country %> </li>
+<%= link_to 'Edit', edit_address_path(@address), class: 'btn list-group-item' %> 
+<%= link_to 'Back', addresses_path, class: 'btn list-group-item' %>
+    </ul>
+</div>

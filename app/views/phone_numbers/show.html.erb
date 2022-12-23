@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Person:</strong>
-  <%= @phone_number.person_id %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @phone_number.phone_number %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @phone_number.comment %>
-</p>
-
-<%= link_to 'Edit', edit_phone_number_path(@phone_number) %> |
-<%= link_to 'Back', phone_numbers_path %>
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Person ID: <%= @phone_number.person_id %></li>
+      <li class="list-group-item">Phone #:  <%= @phone_number.phone_number %> </li>
+      <li class="list-group-item">Comment:  <%= @phone_number.comment %> </li>
+<%= link_to 'Edit', edit_phone_number_path(@phone_number), class: 'btn list-group-item' %> 
+<%= link_to 'Back', phone_numbers_path, class: 'btn list-group-item' %>
+    </ul>
+</div>

@@ -1,5 +1,5 @@
-<%= form_with(model: address) do |form| %>
-  <% if address.errors.any? %>
+<%= form_with(model: address, class: 'editform') do |form| %>
+   <% if address.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
 
@@ -10,41 +10,32 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :person_id %>
-    <%= form.text_field :person_id %>
+  <div class="col-md-2">
+     <label class="form-label">Person ID</label>
+<%= form.text_field :person_id, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :street %>
-    <%= form.text_field :street %>
+  <div class="col-md-6">
+    <label class="form-label">Street</label>
+<%= form.text_field :street, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :town %>
-    <%= form.text_field :town %>
+  <div class="col-md-4">
+    <label class="form-label">Town</label>
+    <%= form.text_field :town, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :zip %>
-    <%= form.number_field :zip %>
+    <div class="col-md-4">
+    <label class="form-label">State</label>
+   <%= form.text_field :state, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
+  <div class="col-md-4">
+    <label class="form-label">Zip</label>
+  <%= form.number_field :zip, class: 'form-control' %>
   </div>
-
-
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.country_select :country %>
+  <div class="col-md-4">
+    <label class="form-label">Country</label>
+<%= form.country_select :country, class: 'form-control' %>
   </div>
-
-
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="col-12">
+    <%= form.submit class: 'btn btn-info update' %>
+<%= link_to 'Back', addresses_path, class: 'btn btn-info showback' %>
   </div>
 <% end %>

@@ -1,4 +1,5 @@
-<%= form_with(model: person) do |form| %>
+
+<%= bootstrap_form_with(model: person, class: 'editform') do |form| %>
   <% if person.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -10,43 +11,36 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :salutation %>
-    <%= form.text_field :salutation %>
+  <div class="col-md-2">
+ <%= form.text_field :salutation, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="col-md-4">
+<%= form.text_field :first_name, class: 'form-control'%>
   </div>
-
-  <div class="field">
-    <%= form.label :middle_name %>
-    <%= form.text_field :middle_name %>
+  <div class="col-md-4">
+    <%= form.text_field :middle_name, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="col-md-4">
+   <%= form.text_field :last_name, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :ssn %>
-    <%= form.text_field :ssn %>
+  <div class="col-md-4">
+   <%= form.date_field :dob, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :dob %>
-    <%= form.date_field :dob %>
+    <div class="col-md-4">
+   <%= form.text_field :ssn, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment %>
+  <div class="col-md-6">
+<%= form.text_field :comment, class: 'form-control' %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="col-12">
+    <%= form.submit class: 'btn btn-info update' %>
+<%= link_to 'Back', people_path, class: 'btn btn-info showback' %>
   </div>
 <% end %>
+
+
+  
+
+
+
+

@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Person:</strong>
-  <%= @email.person_id %>
-</p>
-
-<p>
-  <strong>Email address:</strong>
-  <%= @email.email_address %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @email.comment %>
-</p>
-
-<%= link_to 'Edit', edit_email_path(@email) %> |
-<%= link_to 'Back', emails_path %>
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Person ID: <%= @email.person_id %></li>
+      <li class="list-group-item">Email:  <%= @email.email_address %> </li>
+      <li class="list-group-item">Comment:  <%= @email.comment %> </li>
+<%= link_to 'Edit', edit_email_path(@email), class: 'btn list-group-item' %> 
+<%= link_to 'Back', emails_path, class: 'btn list-group-item' %>
+    </ul>
+</div>

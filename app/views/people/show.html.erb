@@ -13,10 +13,13 @@
       <li class="list-group-item">SSN: <%= @person.ssn %> </li>
       <li class="list-group-item">DOB: <%= @person.dob %> </li>
       <li class="list-group-item">Comment: <%= @person.comment %> </li>
-      <%= link_to 'Edit', edit_person_path(@person), class: 'list-group-item' %> 
-      <%= link_to 'Back', people_path, class: 'list-group-item' %>
+      <%= link_to 'Edit', edit_person_path(@person), class: 'btn list-group-item' %> 
+      <%= link_to 'Back', people_path, class: 'btn list-group-item' %>
     </ul>
 </div>
+
+  
+
 
 
 
