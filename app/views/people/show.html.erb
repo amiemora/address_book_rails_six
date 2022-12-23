@@ -1,39 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Salutation:</strong>
-  <%= @person.salutation %>
-</p>
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID: <%= @person.id %></li>
+      <li class="list-group-item">Salutation:  <%= @person.salutation %> </li>
+      <li class="list-group-item">First Name: <%= @person.first_name %> </li>
+      <li class="list-group-item">Middle Name: <%= @person.middle_name %> </li>
+      <li class="list-group-item">Last Name: <%= @person.last_name %> </li>
+      <li class="list-group-item">SSN: <%= @person.ssn %> </li>
+      <li class="list-group-item">DOB: <%= @person.dob %> </li>
+      <li class="list-group-item">Comment: <%= @person.comment %> </li>
+      <%= link_to 'Edit', edit_person_path(@person), class: 'list-group-item' %> 
+      <%= link_to 'Back', people_path, class: 'list-group-item' %>
+    </ul>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
 
-<p>
-  <strong>Middle name:</strong>
-  <%= @person.middle_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
 
-<p>
-  <strong>Ssn:</strong>
-  <%= @person.ssn %>
-</p>
 
-<p>
-  <strong>Dob:</strong>
-  <%= @person.dob %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @person.comment %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>

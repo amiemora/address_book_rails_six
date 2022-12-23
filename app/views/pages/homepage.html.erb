@@ -1,15 +1,18 @@
-<%= link_to 'Person', people_path %>
-<%= link_to 'Address', addresses_path %>
-<%= link_to 'Email', emails_path %>
-<%= link_to 'Phone Number', phone_numbers_path %>
+<div class="btn-group container-fluid menu" role="group" aria-label="Basic example">
+    <%= link_to 'Person', people_path, class: 'btn btn-info' %>
+    <%= link_to 'Address', addresses_path, class: 'btn btn-info' %>
+    <%= link_to 'Email', emails_path, class: 'btn btn-info' %>
+    <%= link_to 'Phone Number', phone_numbers_path, class: 'btn btn-info' %>
+</div>
 
-<div class="container-fluid">
-          <h4>Must be Logged into your account to view your Address Book Details Above.</h4>
-          <h6>Steps: <br />
-          1. Create a Person <br />
-          2. Copy Person ID from Person table <br />
-          3. Add Corresponding Details to the Created Person.<br />
-          4. Must use Person ID to connect the corresponding Person to their Address,Email, & Phone.</h6>
+<div class="container-fluid home">
+    <h4 class="title">Must be Logged into your account to view your Address Book Details Above.</h4>
+    <ul class="list-group">
+        <li class="list-group-item">1. Create a Person.</li>
+        <li class="list-group-item">2. Copy Person ID from Person table.</li>
+        <li class="list-group-item">3. Add Corresponding Details to the Created Person.</li>
+        <li class="list-group-item">4. Must use Person ID to connect the corresponding Person to their Address,Email, & Phone.</li>
+    </ul>
 </div>
 
 
