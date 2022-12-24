@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="modal-body">
+    <p id="notice"><%= notice %></p>
 
 <div class="card centercard" style="width: 18rem;">
 <div class="card-header">
@@ -9,4 +10,8 @@
       <li class="list-group-item">Email:  <%= @email.email_address %> </li>
       <li class="list-group-item">Comment:  <%= @email.comment %> </li>
     </ul>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
 </div>

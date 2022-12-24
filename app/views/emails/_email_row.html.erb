@@ -1,0 +1,8 @@
+<tr id="emailRow_<%= email.id %>">
+    <td><%= email.person_id %></td>
+    <td><%= email.email_address %></td>
+    <td><%= email.comment %></td>
+    <td><%= link_to 'Show', email, data: { bs_toggle: 'modal', bs_target: '#showEmailModal', remote: true } %></td>
+    <td><%= link_to 'Edit', edit_email_path(email), data: { bs_toggle: 'modal', bs_target: '#editEmailModal', remote: true } %></td>
+    <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?', remote: true } %></td>
+</tr>

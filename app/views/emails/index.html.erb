@@ -9,16 +9,9 @@
           <th>Comment</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="emailTable">
     <% @emails.each do |email| %>
-        <tr>
-       <td><%= email.person_id %></td>
-        <td><%= email.email_address %></td>
-        <td><%= email.comment %></td>
-        <td><%= link_to 'Show', email %></td>
-        <td><%= link_to 'Edit', edit_email_path(email) %></td>
-        <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+      <%= render 'email_row', email: email %>
       <% end %>
       </tbody>
   </table>
@@ -26,4 +19,43 @@
 
 <br>
 <%= link_to 'Back', root_path, class: 'btn btn-info' %>
-<%= link_to 'New Email', new_email_path, class: 'btn btn-info' %>
+<%= link_to 'New Email', new_email_path, class: 'btn btn-info', data: { bs_toggle: 'modal', bs_target: '#newEmailModal', remote: true } %>
+
+<div class="modal fade" id="newEmailModal" tabindex="-1" aria-labelledby="newEmailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newEmailModalLabel">Create Person</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="newEmailForm">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editEmailModal" tabindex="-1" aria-labelledby="editEmailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editEmailModalLabel">Edit Person</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="editEmailForm">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showEmailModal" tabindex="-1" aria-labelledby="showEmailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="showEmailModalLabel">Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="showEmailDetail">
+      </div>
+    </div>
+  </div>
+</div>

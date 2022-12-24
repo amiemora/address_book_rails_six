@@ -29,7 +29,9 @@ class EmailsController < ApplicationController
       if @email.save
         format.html { redirect_to email_url(@email), notice: "Email was successfully created." }
         format.json { render :show, status: :created, location: @email }
+        format.js
       else
+        format.js
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @email.errors, status: :unprocessable_entity }
       end
@@ -42,7 +44,9 @@ class EmailsController < ApplicationController
       if @email.update(email_params)
         format.html { redirect_to email_url(@email), notice: "Email was successfully updated." }
         format.json { render :show, status: :ok, location: @email }
+        format.js
       else
+        format.js
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @email.errors, status: :unprocessable_entity }
       end
@@ -56,6 +60,7 @@ class EmailsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to emails_url, notice: "Email was successfully destroyed." }
       format.json { head :no_content }
+      format.js
     end
   end
 

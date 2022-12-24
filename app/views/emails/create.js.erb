@@ -1,0 +1,6 @@
+<% if @email.errors.any? %>
+    alert('Invalid Details');
+<% else %>
+    $("#emailTable").prepend("<%= escape_javascript render('email_row', email: @email)%>");
+    $(".close-modal").click();
+<% end %>
