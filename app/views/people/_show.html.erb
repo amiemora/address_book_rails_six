@@ -1,0 +1,22 @@
+<div class="modal-body">
+    <p id="notice"><%= notice %></p>
+
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID: <%= person.id %></li>
+      <li class="list-group-item">Salutation:  <%= person.salutation %> </li>
+      <li class="list-group-item">First Name: <%= person.first_name %> </li>
+      <li class="list-group-item">Middle Name: <%= person.middle_name %> </li>
+      <li class="list-group-item">Last Name: <%= person.last_name %> </li>
+      <li class="list-group-item">SSN: <%= person.ssn %> </li>
+      <li class="list-group-item">DOB: <%= person.dob %> </li>
+      <li class="list-group-item">Comment: <%= person.comment %> </li>
+    </ul>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+</div>
