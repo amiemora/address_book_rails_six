@@ -1,0 +1,11 @@
+<tr id="addressRow_<%= address.id %>">
+    <td><%= address.person_id %></td>
+    <td><%= address.street %></td>
+    <td><%= address.town %></td>
+    <td><%= address.zip %></td>
+    <td><%= address.state %></td>
+    <td><%= address.country %></td>
+    <td><%= link_to 'Show', address, data: { bs_toggle: 'modal', bs_target: '#showAddressModal', remote: true } %></td>
+    <td><%= link_to 'Edit', edit_address_path(address), data: { bs_toggle: 'modal', bs_target: '#editAddressModal', remote: true } %></td>
+    <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' , remote: true } %></td>
+</tr>

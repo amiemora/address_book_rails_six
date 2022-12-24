@@ -1,0 +1,20 @@
+<div class="modal-body">
+    <p id="notice"><%= notice %></p>
+
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID:   <%= address.person_id %></li>
+      <li class="list-group-item">Street:    <%= address.street %> </li>
+      <li class="list-group-item">Town:  <%= address.town %> </li>
+      <li class="list-group-item">Zip:   <%= address.zip %> </li>
+      <li class="list-group-item">State:  <%= address.state %> </li>
+      <li class="list-group-item">Country:  <%= address.country %> </li>
+    </ul>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+</div>

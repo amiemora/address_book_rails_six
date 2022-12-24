@@ -29,7 +29,9 @@ class AddressesController < ApplicationController
       if @address.save
         format.html { redirect_to address_url(@address), notice: "Address was successfully created." }
         format.json { render :show, status: :created, location: @address }
+        format.js
       else
+        format.js
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
@@ -42,7 +44,9 @@ class AddressesController < ApplicationController
       if @address.update(address_params)
         format.html { redirect_to address_url(@address), notice: "Address was successfully updated." }
         format.json { render :show, status: :ok, location: @address }
+        format.js
       else
+        format.js
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @address.errors, status: :unprocessable_entity }
       end
@@ -56,6 +60,7 @@ class AddressesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to addresses_url, notice: "Address was successfully destroyed." }
       format.json { head :no_content }
+      format.js
     end
   end
 
