@@ -9,21 +9,53 @@
           <th>Comment</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="phoneTable">
  <% @phone_numbers.each do |phone_number| %>
-        <tr>
-       <td><%= phone_number.person_id %></td>
-        <td><%= phone_number.phone_number %></td>
-        <td><%= phone_number.comment %></td>
-        <td><%= link_to 'Show', phone_number %></td>
-        <td><%= link_to 'Edit', edit_phone_number_path(phone_number) %></td>
-        <td><%= link_to 'Destroy', phone_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
+  <%= render 'phone_number_row', phone_number: phone_number %>
+<% end %>
       </tbody>
   </table>
 </div>
 
 <br>
 <%= link_to 'Back', root_path, class: 'btn btn-info' %>
-<%= link_to 'New Email', new_phone_number_path, class: 'btn btn-info' %>
+<%= link_to 'New Phone Number', new_phone_number_path, class: 'btn btn-info', data: { bs_toggle: 'modal', bs_target: '#newPhoneModal', remote: true } %>
+
+<div class="modal fade" id="newPhoneModal" tabindex="-1" aria-labelledby="newPhoneModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newPhoneModalLabel">Create Phone Number</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="newPhoneForm">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editPhoneModal" tabindex="-1" aria-labelledby="editPhoneModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editPhoneModalLabel">Edit Phone Number</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="editPhoneForm">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="showPhoneModal" tabindex="-1" aria-labelledby="showPhoneModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="showPhoneModalLabel">Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="showPhoneDetail">
+      </div>
+    </div>
+  </div>
+</div>

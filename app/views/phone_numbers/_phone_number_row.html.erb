@@ -1,0 +1,8 @@
+<tr id="phoneRow_<%= phone_number.id %>">
+       <td><%= phone_number.person_id %></td>
+        <td><%= phone_number.phone_number %></td>
+        <td><%= phone_number.comment %></td>
+        <td><%= link_to 'Show', phone_number, data: { bs_toggle: 'modal', bs_target: '#showPhoneModal', remote: true } %></td>
+        <td><%= link_to 'Edit', edit_phone_number_path(phone_number), data: { bs_toggle: 'modal', bs_target: '#editPhoneModal', remote: true } %></td>
+        <td><%= link_to 'Destroy', phone_number, method: :delete, data: { confirm: 'Are you sure?', remote: true } %></td>
+</tr>

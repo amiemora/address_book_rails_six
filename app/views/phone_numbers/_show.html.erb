@@ -1,0 +1,17 @@
+<div class="modal-body">
+    <p id="notice"><%= notice %></p>
+
+<div class="card centercard" style="width: 18rem;">
+<div class="card-header">
+    Details
+</div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Person ID: <%= @phone_number.person_id %></li>
+      <li class="list-group-item">Phone #:  <%= @phone_number.phone_number %> </li>
+      <li class="list-group-item">Comment:  <%= @phone_number.comment %> </li>
+    </ul>
+</div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+</div>

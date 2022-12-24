@@ -1,6 +1,6 @@
-
-<%= form_with(model: phone_number, class: 'editform') do |form| %>
-  <% if phone_number.errors.any? %>
+<%= form_with(model: phone_number, class: 'editform', local: false) do |form| %>
+<div class="modal-body">
+    <% if phone_number.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(phone_number.errors.count, "error") %> prohibited this phone_number from being saved:</h2>
 
@@ -23,8 +23,9 @@
     <label class="form-label">Comment</label>
     <%= form.text_field :comment, class: 'form-control' %>
   </div>
-  <div class="col-12">
-    <%= form.submit class: 'btn btn-info update' %>
-<%= link_to 'Back', phone_numbers_path, class: 'btn btn-info showback' %>
-  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+  <%= form.submit class: 'btn btn-info update' %>
+</div>
 <% end %>

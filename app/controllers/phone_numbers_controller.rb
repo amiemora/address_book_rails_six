@@ -29,7 +29,9 @@ class PhoneNumbersController < ApplicationController
       if @phone_number.save
         format.html { redirect_to phone_number_url(@phone_number), notice: "Phone number was successfully created." }
         format.json { render :show, status: :created, location: @phone_number }
+        format.js
       else
+        format.js
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @phone_number.errors, status: :unprocessable_entity }
       end
@@ -42,7 +44,9 @@ class PhoneNumbersController < ApplicationController
       if @phone_number.update(phone_number_params)
         format.html { redirect_to phone_number_url(@phone_number), notice: "Phone number was successfully updated." }
         format.json { render :show, status: :ok, location: @phone_number }
+        format.js
       else
+        format.js
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @phone_number.errors, status: :unprocessable_entity }
       end
@@ -56,6 +60,7 @@ class PhoneNumbersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to phone_numbers_url, notice: "Phone number was successfully destroyed." }
       format.json { head :no_content }
+      format.js
     end
   end
 
