@@ -1,0 +1,8 @@
+<% if @person.errors.any? %>
+    alert('Invalid Details');
+<% else %>
+    $("#personTable").prepend("<%= escape_javascript render('person_row', person: @person)%>");
+    $(".close-modal").click();
+<% end %>
+
+<%# Here we are append a new user to the top of the tbale and making sure once the create button is clicked that the modal closes  %>

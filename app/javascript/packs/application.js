@@ -10,6 +10,12 @@ import "channels"
 import 'bootstrap'; 
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+import $ from 'jquery';
+global.$ = jQuery;
+

@@ -1,0 +1,13 @@
+<tr id="personRow_<%= person.id %>">
+          <td><%= person.id %></td>
+          <td><%= person.salutation %></td>
+          <td><%= person.first_name %></td>
+          <td><%= person.middle_name %></td>
+          <td><%= person.last_name %></td>
+          <td><%= person.ssn %></td>
+          <td><%= person.dob %></td>
+          <td><%= person.comment %></td>
+          <td><%= link_to 'Show', person %></td>
+          <td><%= link_to 'Edit', edit_person_path(person) %></td>
+          <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

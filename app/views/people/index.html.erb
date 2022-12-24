@@ -14,21 +14,9 @@
           <th>Comment</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="personTable">
       <% @people.each do |person| %>
-        <tr>
-          <td><%= person.id %></td>
-          <td><%= person.salutation %></td>
-          <td><%= person.first_name %></td>
-          <td><%= person.middle_name %></td>
-          <td><%= person.last_name %></td>
-          <td><%= person.ssn %></td>
-          <td><%= person.dob %></td>
-          <td><%= person.comment %></td>
-          <td><%= link_to 'Show', person %></td>
-          <td><%= link_to 'Edit', edit_person_path(person) %></td>
-          <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+        <%= render 'person_row', person: person %>
       <% end %>
       </tbody>
   </table>
@@ -36,6 +24,23 @@
 
 <br>
 <%= link_to 'Back', root_path,  class: 'btn btn-info' %>
-<%= link_to 'New Person', new_person_path, class: 'btn btn-info' %>
+<%= link_to 'New Person', new_person_path, class: 'btn btn-info', data: { bs_toggle: 'modal', bs_target: '#newPersonModal', remote: true } %>
+
+
+
+
+
+<div class="modal fade" id="newPersonModal" tabindex="-1" aria-labelledby="newPersonModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newPersonModalLabel">Create Person</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="newPersonForm">
+      </div>
+    </div>
+  </div>
+</div>
 
 
