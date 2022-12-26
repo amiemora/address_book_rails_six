@@ -67,3 +67,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "country_select", "~> 6.0"
 gem 'schema_to_scaffold'
+
+group :development, :test do
+  gem 'factory_bot_rails'
+end

@@ -38,4 +38,5 @@ class ActionDispatch::IntegrationTest
   include Capybara::DSL
   include AuthenticationMacros
   before(:each) { reset_login } # We want to run this mehod before each test
+  include FactoryBot::Syntax::Methods
 end

@@ -1,4 +1,6 @@
 FactoryBot.define do
+
+
     factory :user do |f|
       f.sequence(:email) { |n| "test#{n}@account.com" }
       f.password { "password" }
@@ -30,6 +32,8 @@ FactoryBot.define do
       f.association :user
       f.association :person
     end
+
+  
   end
   
   #allows us to use the model User in order to simulate an existing user
