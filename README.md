@@ -1,24 +1,12 @@
-# README
+# address_book_lastname_firstname Recreated with Rails 6.1.7 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Requirements 
+- PSQL
+- Ruby on Rails 6.1.7
+- Written Tests for the Application
+- 4 entities with corresponding relationships
+- CRUD capabilities on each entity
+- AJAX implementations
+- Simple Authentication & Authorization (from scratch)
+- Bootstrap
+- Responsive Design
