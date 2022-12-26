@@ -5,6 +5,7 @@ class AddressesController < ApplicationController
   # GET /addresses or /addresses.json
   def index
     @addresses = current_user.addresses.all
+    # render json: @addresses
   end
 
   # GET /addresses/1 or /addresses/1.json

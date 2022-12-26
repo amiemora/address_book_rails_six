@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     helper_method :current_user
 
     def current_person 
-        @current_person ||= Person.find session[:person_id] if session[:person_id]
+        @current_person ||= Person.find(params[:id])
     end
 
     helper_method :current_person 

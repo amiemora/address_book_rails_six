@@ -5,6 +5,7 @@ class PhoneNumbersController < ApplicationController
   # GET /phone_numbers or /phone_numbers.json
   def index
     @phone_numbers = current_user.phone_numbers.all
+    #render json: @phone_numbers
   end
 
   # GET /phone_numbers/1 or /phone_numbers/1.json

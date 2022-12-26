@@ -5,6 +5,7 @@ class EmailsController < ApplicationController
   # GET /emails or /emails.json
   def index
     @emails = current_user.emails.all
+    # render json: @emails
   end
 
   # GET /emails/1 or /emails/1.json

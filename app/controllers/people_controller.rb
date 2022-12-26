@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
   # GET /people or /people.json
   def index
     @people = current_user.people.order(created_at: :desc)
+    # render json: @people
   end
 
   # GET /people/1 or /people/1.json
