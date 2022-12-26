@@ -16,7 +16,6 @@ class EmailsTest < ApplicationSystemTestCase
 
     fill_in "Comment", with: @email.comment
     fill_in "Email address", with: @email.email_address
-    fill_in "People", with: @email.people_id
     fill_in "Person", with: @email.person_id
     fill_in "User", with: @email.user_id
     click_on "Create Email"
@@ -31,7 +30,6 @@ class EmailsTest < ApplicationSystemTestCase
 
     fill_in "Comment", with: @email.comment
     fill_in "Email address", with: @email.email_address
-    fill_in "People", with: @email.people_id
     fill_in "Person", with: @email.person_id
     fill_in "User", with: @email.user_id
     click_on "Update Email"

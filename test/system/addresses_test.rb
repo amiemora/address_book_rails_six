@@ -15,7 +15,6 @@ class AddressesTest < ApplicationSystemTestCase
     click_on "New Address"
 
     fill_in "Country", with: @address.country
-    fill_in "People", with: @address.people_id
     fill_in "Person", with: @address.person_id
     fill_in "State", with: @address.state
     fill_in "Street", with: @address.street
@@ -33,7 +32,6 @@ class AddressesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Country", with: @address.country
-    fill_in "People", with: @address.people_id
     fill_in "Person", with: @address.person_id
     fill_in "State", with: @address.state
     fill_in "Street", with: @address.street

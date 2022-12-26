@@ -15,7 +15,6 @@ class PhoneNumbersTest < ApplicationSystemTestCase
     click_on "New Phone Number"
 
     fill_in "Comment", with: @phone_number.comment
-    fill_in "People", with: @phone_number.people_id
     fill_in "Person", with: @phone_number.person_id
     fill_in "Phone number", with: @phone_number.phone_number
     fill_in "User", with: @phone_number.user_id
@@ -30,7 +29,6 @@ class PhoneNumbersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Comment", with: @phone_number.comment
-    fill_in "People", with: @phone_number.people_id
     fill_in "Person", with: @phone_number.person_id
     fill_in "Phone number", with: @phone_number.phone_number
     fill_in "User", with: @phone_number.user_id
