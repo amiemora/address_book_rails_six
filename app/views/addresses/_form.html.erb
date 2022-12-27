@@ -11,27 +11,27 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-md-2">
+  <div class="col-md-6">
      <label class="form-label">Person ID</label>
 <%= form.text_field :person_id, class: 'form-control' %>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-10">
     <label class="form-label">Street</label>
 <%= form.text_field :street, class: 'form-control' %>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <label class="form-label">Town</label>
     <%= form.text_field :town, class: 'form-control' %>
   </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
     <label class="form-label">State</label>
    <%= form.text_field :state, class: 'form-control' %>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <label class="form-label">Zip</label>
   <%= form.number_field :zip, class: 'form-control' %>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <label class="form-label">Country</label>
 <%= form.country_select :country, class: 'form-control' %>
   </div>
