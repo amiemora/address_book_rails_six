@@ -1,7 +1,6 @@
 require "test_helper"
 
-class AddressTest < ActiveSupport::TestCase
-
+class AddressTest < ActiveSupport::TestCase 
 
   test "has a valid factory" do
     address = FactoryBot.build :address

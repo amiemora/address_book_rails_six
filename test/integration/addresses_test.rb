@@ -29,4 +29,6 @@ class AddressesTest < ActionDispatch::IntegrationTest
         #Passes test
     end
 
+
+
 end

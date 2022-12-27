@@ -28,4 +28,11 @@ class PeopleTest < ActionDispatch::IntegrationTest
     click_button "Create Person"
     #Passes test
   end
+
+  # test "Update" do
+  #   login_user
+  #   visit people_path
+
+  #   click_on "Edit"
+  # end 
 end

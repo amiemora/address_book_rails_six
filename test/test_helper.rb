@@ -29,6 +29,7 @@ class ActiveSupport::TestCase
 
   #Minitest with the Spec
   extend Minitest::Spec::DSL
+  include AuthenticationMacros
 
   # Add more helper methods to be used by all tests here...
 end
@@ -40,3 +41,5 @@ class ActionDispatch::IntegrationTest
   before(:each) { reset_login } # We want to run this mehod before each test
   include FactoryBot::Syntax::Methods
 end
+
+

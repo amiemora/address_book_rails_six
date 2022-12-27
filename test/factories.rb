@@ -33,6 +33,8 @@ FactoryBot.define do
       f.association :person
     end
 
+
+   
   
   end
   
